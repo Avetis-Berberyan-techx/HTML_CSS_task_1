@@ -464,20 +464,130 @@
     gap: 8%;
     justify-content: center;
     display: flex;
+    flex-wrap: wrap;
     padding-bottom: 18px;
  }
 
 /* LEFT CONTENT BLOCK */
 .reverifi__body { }
 
-.reverifi__body--title { }
+.reverifi__body--title {
+    padding: 15px 0;
+ }
 .reverifi__body--title img { }
 
-.reverifi__body--text { }
+.reverifi__body--text { 
+    padding: 15px 0;
+}
 
-.reverifi__body--seeMore { }
+.reverifi__body--seeMore {
+    display: inline-block;       
+    background-color: #B2D235;  
+    color: #ffffff;             
+    padding: 8px 16px;           
+    border-radius: 26px;          
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin: 15px 0;
+}
 
-/* RIGHT IMAGE BLOCK */
+.reverifi__body--seeMore:hover {
+    background-color: #d6e0ff;  
+}
+
+
 .reverifi__image { }
 .reverifi__image img { }
+
+/* MAIN GRID — RIGHT IMAGE BIGGER ON DESKTOP */
+.city-gallery {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    position: relative;
+    left: 6%;
+}
+
+/* LEFT IMAGE CONTAINER */
+.city-gallery__left {
+    width: 100%;
+}
+
+/* LEFT IMAGE ITSELF */
+.city-gallery__left img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* RIGHT IMAGE CONTAINER */
+.city-gallery__right {
+    width: 100%;
+}
+
+/* RIGHT IMAGE ITSELF */
+.city-gallery__right img {
+    width: 84%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* DOTS SECTION */
+.gallery-dots {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-dots span {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    
+}
+
+/* ------------------------------ */
+/*        MOBILE FIXED VERSION    */
+/* ------------------------------ */
+
+@media (max-width: 360px) {
+
+    .city-gallery {
+        grid-template-columns: 1fr;  /* single column */
+        left: 0;                      /* fix centering */
+    }
+
+    .city-gallery__right {
+        display: none !important;    /* hide right image */
+    }
+
+    .city-gallery__left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .city-gallery__left img {
+        width: 100%;
+        height: 400px;               /* adjust size */
+        object-fit: cover;           /* make image look like your sample */
+        object-position: center;     /* center the image */
+    }
+
+    .gallery-dots {
+        position: relative;
+        bottom: 60px;            /* bring dots closer */
+    }
+    .gallery-dots span {
+        background-color: #888;
+    }
+
+}
 
