@@ -812,6 +812,12 @@
     font-size: 18px;
     margin-bottom: 15px;
     color: #222;
+    position: relative;
+    right: 2%;
+}
+
+.footer-col_title{
+    transform: translateX(-26%);
 }
 
 .footer-col a {
@@ -894,6 +900,9 @@
         width: 100%;
         margin-bottom: 25px;
         text-align: center;
+    }
+    .footer-col_title{
+        transform: translateX(0%);
     }
 
     .footer-col h4 {
