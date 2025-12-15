@@ -273,10 +273,7 @@ body {
 }
 
 .property-card__footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  padding: 15px 20px;
+  display: flex;
 }
 
 .property-card__price {
@@ -448,6 +445,8 @@ body {
 .event-card__action-btn {
   width: 25px;
   height: 25px;
+  min-width: 25px;
+  min-height: 25px;
   padding: 0;
   border-radius: 50%;
   border: none;
